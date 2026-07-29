@@ -1,19 +1,19 @@
 - Infrastructure:
     - Pi-hole:
         icon: pi-hole.png
-        href: http://192.168.1.183/admin
+        href: http://home-lab.local/admin
         description: DNS + bloqueur publicitaire
     - Portainer:
         icon: portainer.png
-        href: https://192.168.1.183:9443
+        href: https://home-lab.local:9443
         description: Gestion Docker
 
 - Monitoring:
     - Grafana:
         icon: grafana.png
-        href: http://192.168.1.183:3001
+        href: http://home-lab.local:3001
         description: Tableaux de bord
     - Uptime Kuma:
         icon: uptime-kuma.png
-        href: http://192.168.1.183:3002
+        href: http://home-lab.local:3002
         description: Supervision
