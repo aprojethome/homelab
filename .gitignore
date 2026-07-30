@@ -42,3 +42,7 @@ docker/*/volumes/
 # ==========================
 .DS_Store
 Thumbs.db
+docker/pihole/etc-pihole/cli_pw
+docker/pihole/etc-pihole/*
+!docker/pihole/etc-pihole/.gitkeep
+docker/pihole/etc-pihole/
