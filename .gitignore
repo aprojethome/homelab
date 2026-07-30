@@ -1,14 +1,6 @@
-backup/*
-!backup/.gitkeep
-
-backups/
-*.tar
-*.tar.gz
-
 # ==========================
-# Secrets
+# Sécurité & Secrets
 # ==========================
-
 .env
 *.env
 *.secret
@@ -17,52 +9,36 @@ backups/
 *.crt
 
 # ==========================
-# WireGuard
+# WireGuard & VPN
 # ==========================
-
 config/wireguard/
 *.conf
 
 # ==========================
-# Sauvegardes
+# Sauvegardes & Archives
 # ==========================
-
 backup/*
 !backup/.gitkeep
-
 backups/
 *.tar
 *.tar.gz
 
 # ==========================
-# Docker
+# Données Docker & Logs
 # ==========================
-
 docker/*/data/
 docker/*/volumes/
-
-# ==========================
-# Logs
-# ==========================
-
 *.log
 
 # ==========================
-# Cache
+# Cache & Éditeurs
 # ==========================
-
 .cache/
-
-# ==========================
-# Éditeurs
-# ==========================
-
 .vscode/
 .idea/
 
 # ==========================
-# Linux / macOS
+# Système (OS)
 # ==========================
-
 .DS_Store
 Thumbs.db
