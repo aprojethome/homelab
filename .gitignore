@@ -22,7 +22,7 @@ backup/*
 backups/
 *.tar
 *.tar.gz
-
+echo "backups/" >> ~/homelab/.gitignore
 # ==========================
 # Données Docker & Logs
 # ==========================
