@@ -1,18 +1,14 @@
 # ==========================
-# Sécurité & Secrets
+# Sécurité & Secrets (TRÈS IMPORTANT)
 # ==========================
+# Ignorer tous les fichiers de variables d'environnement
 .env
 *.env
-*.secret
-*.key
-*.pem
-*.crt
 
-# ==========================
-# WireGuard & VPN
-# ==========================
-config/wireguard/
-*.conf
+# Ignorer les clés et configs générées par WireGuard
+docker/wireguard/config/
+**/wireguard/config/
+config/
 
 # ==========================
 # Sauvegardes & Archives
@@ -22,7 +18,7 @@ backup/*
 backups/
 *.tar
 *.tar.gz
-echo "backups/" >> ~/homelab/.gitignore
+
 # ==========================
 # Données Docker & Logs
 # ==========================
@@ -38,11 +34,10 @@ docker/*/volumes/
 .idea/
 
 # ==========================
-# Système (OS)
+# Système & Conteneurs spécifiques
 # ==========================
 .DS_Store
 Thumbs.db
 docker/pihole/etc-pihole/cli_pw
 docker/pihole/etc-pihole/*
 !docker/pihole/etc-pihole/.gitkeep
-docker/pihole/etc-pihole/
