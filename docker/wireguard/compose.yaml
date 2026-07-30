@@ -1,0 +1,37 @@
+# ==============================================================================
+# CONFIGURATION FICTIVE / EXEMPLE POUR GITHUB
+# Toutes les valeurs (domaine, IP, ports) sont strictement fictives par mesure de sécurité.
+# ==============================================================================
+
+version: "3.9"
+
+services:
+  wireguard:
+    image: lscr.io/linuxserver/wireguard:latest
+    container_name: wireguard
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      PUID: 1000
+      PGID: 1000
+      TZ: Europe/Paris
+      SERVERURL: mon-domaine-fictif.duckdns.org  # Domaine DDNS fictif (ex: votre-domaine.duckdns.org)
+      SERVERPORT: 51820                          # Port UDP officiel de WireGuard
+      PEERS: 1                                   # Nombre de profils clients à générer
+      PEERDNS: 192.168.1.X                       # IP locale fictive du Pi-hole (ex: 192.168.1.50)
+      INTERNAL_SUBNET: 10.13.13.0
+    volumes:
+      - ./wireguard/config:/config
+      - /lib/modules:/lib/modules
+    ports:
+      - "51820:51820/udp"                        # Port UDP officiel WireGuard (externe:interne)
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true
