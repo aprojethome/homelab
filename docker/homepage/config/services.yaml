@@ -13,6 +13,10 @@
         icon: grafana.png
         href: http://home-lab.local:3001
         description: Tableaux de bord
+    - Prometheus:
+        icon: prometheus.png
+        href: http://home-lab.local:9090
+        description: Collecte métriques
     - Uptime Kuma:
         icon: uptime-kuma.png
         href: http://home-lab.local:3002
